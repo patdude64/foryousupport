@@ -5,28 +5,15 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 // Logo Component using actual image
-function Logo({ size = 200, showText = false }: { size?: number; showText?: boolean }) {
-  if (showText) {
-    // Full horizontal logo with text
-    return (
-      <Image
-        src="/logo-full.jpg"
-        alt="For You Support Coordination"
-        width={size * 2.5}
-        height={size}
-        className={styles.logoImageFull}
-        priority
-      />
-    );
-  }
-  // Icon only logo
+function Logo({ size = 200, variant = "full", darkBg = false }: { size?: number; variant?: "full" | "icon"; darkBg?: boolean }) {
+  // Full horizontal logo with text (default)
   return (
     <Image
-      src="/logo.png"
-      alt="For You Support Coordination Logo"
-      width={size}
+      src="/logo-full.jpg"
+      alt="For You Support Coordination"
+      width={size * 2.8}
       height={size}
-      className={styles.logoImage}
+      className={darkBg ? styles.logoImageFullDark : styles.logoImageFull}
       priority
     />
   );
@@ -225,7 +212,7 @@ export default function Home() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.navContainer}>
           <a href="#" className={styles.navLogo}>
-            <Logo size={45} showText={true} />
+            <Logo size={42} />
           </a>
           <ul className={styles.navLinks}>
             <li>
@@ -299,7 +286,7 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoContainer}>
-            <Logo size={120} showText={true} />
+            <Logo size={100} />
           </div>
           <p className={styles.heroTagline}>
             Helping NDIS participants navigate their plans, connect with the
@@ -370,7 +357,7 @@ export default function Home() {
             </div>
             <div className={styles.storiesVisual}>
               <div className={styles.storiesLogoWrap}>
-                <Logo size={200} />
+                <Logo size={90} />
               </div>
             </div>
           </div>
@@ -624,11 +611,7 @@ export default function Home() {
           <div className={styles.footerGrid}>
             <div className={styles.footerBrand}>
               <div className={styles.footerLogo}>
-                <Logo size={46} />
-                <div>
-                  <div className={styles.footerLogoText}>FOR YOU</div>
-                  <div className={styles.footerLogoSub}>Support Coordination</div>
-                </div>
+                <Logo size={38} darkBg={true} />
               </div>
               <p>
                 Professional NDIS Support Coordination services helping
