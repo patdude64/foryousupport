@@ -5,7 +5,21 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 // Logo Component using actual image
-function Logo({ size = 200 }: { size?: number }) {
+function Logo({ size = 200, showText = false }: { size?: number; showText?: boolean }) {
+  if (showText) {
+    // Full horizontal logo with text
+    return (
+      <Image
+        src="/logo-full.jpg"
+        alt="For You Support Coordination"
+        width={size * 2.5}
+        height={size}
+        className={styles.logoImageFull}
+        priority
+      />
+    );
+  }
+  // Icon only logo
   return (
     <Image
       src="/logo.png"
@@ -211,11 +225,7 @@ export default function Home() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.navContainer}>
           <a href="#" className={styles.navLogo}>
-            <Logo size={50} />
-            <div className={styles.navLogoText}>
-              <span className={styles.navLogoTitle}>FOR YOU</span>
-              <span className={styles.navLogoSubtitle}>Support Coordination</span>
-            </div>
+            <Logo size={45} showText={true} />
           </a>
           <ul className={styles.navLinks}>
             <li>
@@ -289,11 +299,7 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoContainer}>
-            <Logo size={180} />
-          </div>
-          <h1 className={styles.heroBrandName}>FOR YOU</h1>
-          <div className={styles.heroBrandSub}>
-            <span>Support Coordination</span>
+            <Logo size={120} showText={true} />
           </div>
           <p className={styles.heroTagline}>
             Helping NDIS participants navigate their plans, connect with the
@@ -528,8 +534,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4>Phone</h4>
-                  <p>555-122-4567</p>
+<h4>Phone</h4>
+  <p>0721 186 48</p>
                 </div>
               </div>
 

@@ -178,6 +178,11 @@
   object-fit: contain;
 }
 
+.logoImageFull {
+  object-fit: contain;
+  height: auto;
+}
+
 .heroContent {
   position: relative;
   z-index: 1;
