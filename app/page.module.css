@@ -171,13 +171,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to right,
-    rgba(253, 250, 245, 0.92) 0%,
-    rgba(253, 250, 245, 0.85) 40%,
-    rgba(253, 250, 245, 0.6) 70%,
-    rgba(253, 250, 245, 0.4) 100%
-  );
+  background: rgba(253, 250, 245, 0.75);
 }
 
 .logoImage {
@@ -204,43 +198,13 @@
   text-align: center;
   padding: 120px 24px 80px;
   max-width: 600px;
-  margin-left: 10%;
+  margin: 0 auto;
 }
 
 .heroLogoContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-}
-
-.heroLogoIcon {
-  width: 180px;
-  height: auto;
-  mix-blend-mode: multiply;
-}
-
-.heroBrandName {
-  font-family: var(--font-playfair), Georgia, serif;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
-  font-weight: 700;
-  color: #0c4a6e;
-  letter-spacing: 3px;
-  margin-bottom: 0;
-  line-height: 1;
-}
-
-.heroBrandSub {
-  font-family: var(--font-inter), sans-serif;
-  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
-  font-weight: 600;
-  color: #0d9488;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-bottom: 24px;
-}
-
-.heroTagline {
-  display: none;
+  margin-bottom: 32px;
 }
 
 .heroCta {

@@ -286,17 +286,8 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoContainer}>
-            <Image
-              src="/logo.png"
-              alt="For You Support Coordination"
-              width={180}
-              height={180}
-              className={styles.heroLogoIcon}
-              priority
-            />
+            <Logo size={100} />
           </div>
-          <h1 className={styles.heroBrandName}>FOR YOU</h1>
-          <div className={styles.heroBrandSub}>SUPPORT COORDINATION</div>
           <a href="#contact" className={styles.heroCta}>
             Get Started
           </a>
