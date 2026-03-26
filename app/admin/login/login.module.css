@@ -102,10 +102,30 @@
   font-size: 0.875rem;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.signupLink {
+  color: #0d9488;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.signupLink:hover {
+  color: #0f766e;
+  text-decoration: underline;
+}
+
 .backLink {
   display: block;
   text-align: center;
-  margin-top: 24px;
   color: #64748b;
   text-decoration: none;
   font-size: 0.875rem;

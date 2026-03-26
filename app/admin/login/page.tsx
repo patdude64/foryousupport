@@ -79,9 +79,14 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-        <a href="/" className={styles.backLink}>
-          Back to website
-        </a>
+        <div className={styles.links}>
+          <a href="/admin/signup" className={styles.signupLink}>
+            Create admin account
+          </a>
+          <a href="/" className={styles.backLink}>
+            Back to website
+          </a>
+        </div>
       </div>
     </div>
   );
