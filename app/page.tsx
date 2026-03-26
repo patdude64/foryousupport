@@ -1,68 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import styles from "./page.module.css";
 
-// SVG Logo Component
-function Logo({ size = 200, id = "" }: { size?: number; id?: string }) {
+// Logo Component using actual image
+function Logo({ size = 200 }: { size?: number }) {
   return (
-    <svg
+    <Image
+      src="/logo.png"
+      alt="For You Support Coordination Logo"
       width={size}
       height={size}
-      viewBox="0 0 200 200"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <linearGradient
-          id={`handGrad1${id}`}
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-        >
-          <stop offset="0%" style={{ stopColor: "#14b8a6" }} />
-          <stop offset="100%" style={{ stopColor: "#0f766e" }} />
-        </linearGradient>
-        <linearGradient
-          id={`handGrad2${id}`}
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-        >
-          <stop offset="0%" style={{ stopColor: "#22a67a" }} />
-          <stop offset="100%" style={{ stopColor: "#0d9488" }} />
-        </linearGradient>
-      </defs>
-      <path
-        d="M140 40 C155 35, 170 50, 160 65 C150 80, 130 90, 115 95 C105 98, 95 95, 90 88"
-        stroke={`url(#handGrad1${id})`}
-        strokeWidth="12"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M55 160 C40 165, 25 150, 35 135 C45 120, 65 110, 80 105 C90 102, 100 105, 105 112"
-        stroke={`url(#handGrad2${id})`}
-        strokeWidth="12"
-        fill="none"
-        strokeLinecap="round"
-      />
-      <path
-        d="M100 85 C92 72, 72 72, 72 88 C72 104, 100 120, 100 120 C100 120, 128 104, 128 88 C128 72, 108 72, 100 85Z"
-        fill="#e8964b"
-        opacity="0.7"
-      />
-      <circle cx="88" cy="100" r="5" fill="#0d9488" />
-      <circle cx="100" cy="96" r="6" fill="#e8964b" />
-      <circle cx="112" cy="100" r="5" fill="#22a67a" />
-      <polygon
-        points="115,58 118,66 127,66 120,71 123,80 115,75 107,80 110,71 103,66 112,66"
-        fill="#e8a948"
-      />
-      <path d="M120 110 C128 104, 136 108, 130 116" fill="#22a67a" opacity="0.6" />
-      <path d="M75 82 C68 76, 60 80, 66 88" fill="#14b8a6" opacity="0.6" />
-    </svg>
+      className={styles.logoImage}
+      priority
+    />
   );
 }
 
@@ -259,7 +211,7 @@ export default function Home() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.navContainer}>
           <a href="#" className={styles.navLogo}>
-            <Logo size={50} id="nav" />
+            <Logo size={50} />
             <div className={styles.navLogoText}>
               <span className={styles.navLogoTitle}>FOR YOU</span>
               <span className={styles.navLogoSubtitle}>Support Coordination</span>
@@ -325,11 +277,19 @@ export default function Home() {
 
       {/* Hero */}
       <section className={styles.hero} id="home">
-        <div className={styles.heroBgDecor}></div>
-        <div className={styles.heroBgBlur}></div>
+        <div className={styles.heroBackground}>
+          <Image
+            src="/hero-family.jpg"
+            alt="Diverse family smiling together"
+            fill
+            className={styles.heroBackgroundImage}
+            priority
+          />
+          <div className={styles.heroOverlay}></div>
+        </div>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoContainer}>
-            <Logo size={220} id="hero" />
+            <Logo size={180} />
           </div>
           <h1 className={styles.heroBrandName}>FOR YOU</h1>
           <div className={styles.heroBrandSub}>
@@ -404,7 +364,7 @@ export default function Home() {
             </div>
             <div className={styles.storiesVisual}>
               <div className={styles.storiesLogoWrap}>
-                <Logo size={200} id="stories" />
+                <Logo size={200} />
               </div>
             </div>
           </div>
@@ -658,7 +618,7 @@ export default function Home() {
           <div className={styles.footerGrid}>
             <div className={styles.footerBrand}>
               <div className={styles.footerLogo}>
-                <Logo size={46} id="footer" />
+                <Logo size={46} />
                 <div>
                   <div className={styles.footerLogoText}>FOR YOU</div>
                   <div className={styles.footerLogoSub}>Support Coordination</div>
