@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 174 78% 30%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 30 84% 60%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 174 78% 30%;
+  --radius: 0.75rem;
+  
+  /* Custom brand colors */
+  --navy: 205 80% 21%;
+  --navy-dark: 205 80% 15%;
+  --teal: 174 78% 30%;
+  --teal-light: 174 72% 40%;
+  --teal-dark: 174 78% 24%;
+  --green: 157 65% 40%;
+  --orange: 28 78% 60%;
+  --orange-light: 30 83% 65%;
+  --gold: 38 80% 60%;
+  --cream: 36 50% 96%;
+  --cream-light: 36 60% 98%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: hsl(var(--foreground));
+  line-height: 1.6;
+  background: hsl(var(--background));
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
