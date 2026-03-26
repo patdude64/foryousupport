@@ -535,7 +535,7 @@ export default function Home() {
                 </div>
                 <div>
 <h4>Phone</h4>
-  <p>0721 186 48</p>
+                  <p>0721 18648</p>
                 </div>
               </div>
 
@@ -737,7 +737,7 @@ export default function Home() {
                     strokeWidth="2"
                   />
                 </svg>
-                <span>555-122-4567</span>
+                <span>0721 18648</span>
               </div>
               <div className={styles.footerContactItem}>
                 <svg viewBox="0 0 24 24">
