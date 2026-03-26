@@ -176,21 +176,20 @@
 
 .logoImage {
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .logoImageFull {
   object-fit: contain;
   height: auto;
   mix-blend-mode: multiply;
-  border-radius: 4px;
+  filter: contrast(1.05);
 }
 
 .logoImageFullDark {
   object-fit: contain;
   height: auto;
-  filter: brightness(1.15);
-  border-radius: 4px;
+  mix-blend-mode: multiply;
+  filter: contrast(1.1) brightness(1.05);
 }
 
 .heroContent {
@@ -204,13 +203,6 @@
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
-  background: rgba(253, 249, 243, 0.85);
-  padding: 16px 24px;
-  border-radius: 12px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .heroBrandName {
@@ -476,14 +468,9 @@
 }
 
 .storiesLogoWrap {
-  width: 320px;
-  height: auto;
-  background: transparent;
-  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 /* ===== ABOUT ===== */
@@ -789,10 +776,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 8px 12px;
-  border-radius: 8px;
-  width: fit-content;
 }
 
 .footerLogoText {
