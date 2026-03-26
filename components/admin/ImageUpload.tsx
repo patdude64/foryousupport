@@ -14,6 +14,7 @@ export function ImageUpload({ label, currentImage, onImageChange, type = "image"
   const [preview, setPreview] = useState(currentImage || "")
   const [error, setError] = useState("")
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const uniqueId = useRef(`upload-${type}-${Math.random().toString(36).slice(2, 9)}`)
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -108,10 +109,10 @@ export function ImageUpload({ label, currentImage, onImageChange, type = "image"
             accept="image/*"
             onChange={handleFileChange}
             className="hidden"
-            id={`upload-${type}`}
+            id={uniqueId.current}
           />
           <label
-            htmlFor={`upload-${type}`}
+            htmlFor={uniqueId.current}
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium cursor-pointer transition-colors ${
               uploading
                 ? "bg-gray-200 text-gray-500 cursor-not-allowed"

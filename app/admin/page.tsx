@@ -18,17 +18,17 @@ const defaultConfig: SiteConfig = {
     linkedin: "https://linkedin.com/company/foryousupport"
   },
   images: {
-    logo: "/images/logo.png",
-    heroBanner: "/images/hero-banner.jpg",
-    aboutImage: "/images/about.jpg",
+    logo: "/images/logo.jpg",
+    heroBanner: "/images/header-banner.jpg",
+    aboutImage: "",
     teamPhotos: [],
     serviceImages: {},
     galleryImages: []
   },
   colors: {
-    primary: "#2563eb",
-    secondary: "#7c3aed",
-    accent: "#f59e0b"
+    primary: "#1a7b7b",
+    secondary: "#2d5a5a",
+    accent: "#e8a340"
   },
   hero: {
     title: "Your Trusted NDIS Support Coordination Partner",
@@ -40,23 +40,23 @@ const defaultConfig: SiteConfig = {
     {
       id: "1",
       title: "Support Coordination",
-      description: "We help you understand and implement your NDIS plan effectively.",
+      description: "We help you understand and implement your NDIS plan effectively, connecting you with the right providers and services.",
       icon: "clipboard",
-      image: "/images/services/coordination.jpg"
+      image: ""
     },
     {
       id: "2", 
       title: "Plan Management",
-      description: "Let us handle the financial aspects of your NDIS plan.",
+      description: "Let us handle the financial aspects of your NDIS plan, including payments, budgets, and reporting.",
       icon: "calculator",
-      image: "/images/services/management.jpg"
+      image: ""
     },
     {
       id: "3",
       title: "Specialist Support",
-      description: "Access specialized support for complex needs.",
+      description: "Access specialized support for complex needs, with experienced coordinators who understand your unique situation.",
       icon: "heart",
-      image: "/images/services/specialist.jpg"
+      image: ""
     }
   ],
   about: {

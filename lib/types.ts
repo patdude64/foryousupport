@@ -79,17 +79,17 @@ export const defaultConfig: SiteConfig = {
     linkedin: "https://linkedin.com/company/foryousupport"
   },
   images: {
-    logo: "",
-    heroBanner: "",
+    logo: "/images/logo.jpg",
+    heroBanner: "/images/header-banner.jpg",
     aboutImage: "",
     teamPhotos: [],
     serviceImages: {},
     galleryImages: []
   },
   colors: {
-    primary: "#2563eb",
-    secondary: "#7c3aed",
-    accent: "#f59e0b"
+    primary: "#1a7b7b",
+    secondary: "#2d5a5a",
+    accent: "#e8a340"
   },
   hero: {
     title: "Your Trusted NDIS Support Coordination Partner",
