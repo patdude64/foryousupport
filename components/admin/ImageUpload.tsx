@@ -5,11 +5,11 @@ import { useState, useRef } from "react"
 interface ImageUploadProps {
   label: string
   currentImage?: string
-  onUpload: (url: string) => void
+  onImageChange: (url: string) => void
   type?: string
 }
 
-export function ImageUpload({ label, currentImage, onUpload, type = "image" }: ImageUploadProps) {
+export function ImageUpload({ label, currentImage, onImageChange, type = "image" }: ImageUploadProps) {
   const [uploading, setUploading] = useState(false)
   const [preview, setPreview] = useState(currentImage || "")
   const [error, setError] = useState("")
@@ -50,7 +50,7 @@ export function ImageUpload({ label, currentImage, onUpload, type = "image" }: I
 
       if (data.success) {
         setPreview(data.url)
-        onUpload(data.url)
+        onImageChange(data.url)
       } else {
         setError(data.error || "Upload failed")
         setPreview(currentImage || "")
@@ -65,7 +65,7 @@ export function ImageUpload({ label, currentImage, onUpload, type = "image" }: I
 
   const handleRemove = () => {
     setPreview("")
-    onUpload("")
+    onImageChange("")
     if (fileInputRef.current) {
       fileInputRef.current.value = ""
     }

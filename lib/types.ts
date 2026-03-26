@@ -1,189 +1,136 @@
 export interface SiteConfig {
-  site: {
-    name: string
-    tagline: string
-    description: string
-    phone: string
-    email: string
-    address: string
-    hours: string
+  companyName: string
+  tagline: string
+  phone: string
+  email: string
+  address: string
+  abn: string
+  ndisNumber: string
+  socialMedia: {
+    facebook?: string
+    instagram?: string
+    linkedin?: string
+  }
+  images: {
     logo?: string
-    favicon?: string
+    heroBanner?: string
+    aboutImage?: string
+    teamPhotos?: string[]
+    serviceImages?: Record<string, string>
+    galleryImages?: string[]
   }
   colors: {
     primary: string
-    primaryLight: string
-    primaryDark: string
+    secondary: string
     accent: string
-    text: string
-    textLight: string
-    bg: string
-    bgLight: string
   }
   hero: {
     title: string
     subtitle: string
-    badge: string
-    backgroundImage?: string
-    stat1: { number: string; label: string }
-    stat2: { number: string; label: string }
-    stat3: { number: string; label: string }
-    cta1: string
-    cta2: string
+    ctaText: string
+    ctaLink: string
   }
+  services: Array<{
+    id: string
+    title: string
+    description: string
+    icon: string
+    image?: string
+  }>
   about: {
     title: string
     description: string
-    image?: string
-    features: Array<{
-      icon: string
-      title: string
-      description: string
-    }>
+    mission: string
+    values: string[]
   }
-  services: Array<{
-    icon: string
-    title: string
-    description: string
-    image?: string
-  }>
   team: Array<{
+    id: string
     name: string
     role: string
     bio: string
-    icon: string
     image?: string
   }>
   testimonials: Array<{
+    id: string
     text: string
     author: string
     role: string
     rating: number
     image?: string
   }>
+  contact: {
+    formEnabled: boolean
+    mapEnabled: boolean
+    mapEmbedUrl?: string
+  }
 }
 
 export const defaultConfig: SiteConfig = {
-  site: {
-    name: "For You Support Co-ordination",
-    tagline: "NDIS Support Coordination Services",
-    description: "Professional NDIS Support Coordination services helping participants connect with the right providers and achieve their goals.",
-    phone: "1300 000 000",
-    email: "hello@foryousupport.com.au",
-    address: "123 Support Street, Sydney NSW 2000",
-    hours: "Mon - Fri: 9:00 AM - 5:00 PM"
+  companyName: "For You Support Coordination",
+  tagline: "Empowering Your NDIS Journey with Personalized Support",
+  phone: "0412 345 678",
+  email: "info@foryousupport.com.au",
+  address: "123 Support Street, Melbourne VIC 3000",
+  abn: "12 345 678 901",
+  ndisNumber: "4050012345",
+  socialMedia: {
+    facebook: "https://facebook.com/foryousupport",
+    instagram: "https://instagram.com/foryousupport",
+    linkedin: "https://linkedin.com/company/foryousupport"
+  },
+  images: {
+    logo: "",
+    heroBanner: "",
+    aboutImage: "",
+    teamPhotos: [],
+    serviceImages: {},
+    galleryImages: []
   },
   colors: {
-    primary: "#0d9488",
-    primaryLight: "#14b8a6",
-    primaryDark: "#0f766e",
-    accent: "#e8964b",
-    text: "#1f2937",
-    textLight: "#6b7280",
-    bg: "#ffffff",
-    bgLight: "#f9fafb"
+    primary: "#2563eb",
+    secondary: "#7c3aed",
+    accent: "#f59e0b"
   },
   hero: {
-    title: "Your Journey, Our Support",
-    subtitle: "We help NDIS participants navigate their plans, connect with the right providers, and build the life they choose. Personalised support coordination that puts you first.",
-    badge: "NDIS Registered Provider",
-    stat1: { number: "500+", label: "Participants Supported" },
-    stat2: { number: "98%", label: "Satisfaction Rate" },
-    stat3: { number: "10+", label: "Years Experience" },
-    cta1: "Start Your Journey",
-    cta2: "Our Services"
-  },
-  about: {
-    title: "Dedicated to Empowering Your NDIS Journey",
-    description: "At For You Support Co-ordination, we believe everyone deserves the opportunity to live their best life. Our experienced team works alongside NDIS participants to understand their unique goals, navigate the complexities of the NDIS, and connect them with quality services and supports.",
-    features: [
-      {
-        icon: "target",
-        title: "Person-Centred Approach",
-        description: "Every plan is tailored to your individual goals, preferences, and circumstances."
-      },
-      {
-        icon: "link",
-        title: "Strong Provider Network",
-        description: "We connect you with trusted, quality service providers across all support categories."
-      },
-      {
-        icon: "message",
-        title: "Ongoing Communication",
-        description: "We keep you informed every step of the way with regular check-ins and transparent updates."
-      }
-    ]
+    title: "Your Trusted NDIS Support Coordination Partner",
+    subtitle: "We help you navigate the NDIS with confidence and care",
+    ctaText: "Get Started Today",
+    ctaLink: "#contact"
   },
   services: [
     {
-      icon: "clipboard",
+      id: "1",
       title: "Support Coordination",
-      description: "We help you understand and implement your NDIS plan, ensuring you get the most out of your funding and connect with the right supports."
+      description: "We help you understand and implement your NDIS plan effectively, connecting you with the right providers and services.",
+      icon: "clipboard",
+      image: ""
     },
     {
-      icon: "star",
-      title: "Specialist Support Coordination",
-      description: "For participants with complex needs, we provide specialised coordination to manage challenges and ensure consistent, high-quality care."
+      id: "2",
+      title: "Plan Management",
+      description: "Let us handle the financial aspects of your NDIS plan, including payments, budgets, and reporting.",
+      icon: "calculator",
+      image: ""
     },
     {
-      icon: "home",
-      title: "Housing & Accommodation",
-      description: "We assist with finding suitable housing options including SDA, SIL, and other supported living arrangements tailored to your needs."
-    },
-    {
-      icon: "users",
-      title: "Provider Connections",
-      description: "Leverage our extensive network of trusted NDIS providers to find the best match for your therapy, daily living, and community needs."
-    },
-    {
-      icon: "chart",
-      title: "Plan Management Support",
-      description: "We work alongside your plan manager to track budgets, monitor spending, and ensure your funding is used effectively throughout the year."
-    },
-    {
-      icon: "zap",
-      title: "Capacity Building",
-      description: "We empower you to build skills and confidence to manage your own supports over time, promoting independence and self-advocacy."
+      id: "3",
+      title: "Specialist Support",
+      description: "Access specialized support for complex needs, with experienced coordinators who understand your unique situation.",
+      icon: "heart",
+      image: ""
     }
   ],
-  team: [
-    {
-      name: "Sarah Mitchell",
-      role: "Founder & Lead Coordinator",
-      bio: "Over 12 years of experience in disability services and a passion for person-centred care.",
-      icon: "user"
-    },
-    {
-      name: "James Chen",
-      role: "Senior Support Coordinator",
-      bio: "Specialises in complex needs coordination with a background in allied health management.",
-      icon: "user"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Support Coordinator",
-      bio: "Qualified social worker dedicated to empowering participants to achieve their goals.",
-      icon: "user"
-    }
-  ],
-  testimonials: [
-    {
-      text: "For You Support completely changed how I experience the NDIS. They listened to what I actually needed and connected me with amazing providers. I finally feel in control of my plan.",
-      author: "Michael R.",
-      role: "NDIS Participant",
-      rating: 5
-    },
-    {
-      text: "As a parent of a child with a disability, navigating the NDIS was overwhelming. The team at For You Support made it simple and stress-free. They genuinely care about our family.",
-      author: "Lisa T.",
-      role: "Parent & Carer",
-      rating: 5
-    },
-    {
-      text: "Professional, responsive, and always available when I need them. They helped me find the right housing and daily supports. I could not recommend them more highly.",
-      author: "David K.",
-      role: "NDIS Participant",
-      rating: 5
-    }
-  ]
+  about: {
+    title: "About For You Support",
+    description: "We are a dedicated team of NDIS support coordinators committed to helping you achieve your goals. With years of experience in the disability sector, we understand the unique challenges you face and are here to support you every step of the way.",
+    mission: "To empower individuals with disabilities to live their best lives through personalized, compassionate support coordination.",
+    values: ["Respect", "Integrity", "Empowerment", "Excellence"]
+  },
+  team: [],
+  testimonials: [],
+  contact: {
+    formEnabled: true,
+    mapEnabled: false,
+    mapEmbedUrl: ""
+  }
 }
