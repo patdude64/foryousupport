@@ -737,6 +737,7 @@ export default function Home() {
           </div>
           <div className={styles.footerBottom}>
             <p>&copy; 2026 For You Support Coordination. All rights reserved.</p>
+            <a href="/admin" className={styles.adminLink}>Admin</a>
           </div>
         </div>
       </footer>

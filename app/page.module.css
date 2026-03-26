@@ -881,11 +881,27 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .footerBottom p {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.adminLink {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.adminLink:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ===== RESPONSIVE ===== */
