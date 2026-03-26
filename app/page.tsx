@@ -276,8 +276,8 @@ export default function Home() {
       <section className={styles.hero} id="home">
         <div className={styles.heroBackground}>
           <Image
-            src="/hero-family.jpg"
-            alt="Diverse family smiling together"
+            src="/hero-bg.jpg"
+            alt="Warm living room with couch and plant"
             fill
             className={styles.heroBackgroundImage}
             priority
@@ -288,10 +288,6 @@ export default function Home() {
           <div className={styles.heroLogoContainer}>
             <Logo size={100} />
           </div>
-          <p className={styles.heroTagline}>
-            Helping NDIS participants navigate their plans, connect with the
-            right providers, and build the life they choose.
-          </p>
           <a href="#contact" className={styles.heroCta}>
             Get Started
           </a>
@@ -737,6 +733,7 @@ export default function Home() {
           </div>
           <div className={styles.footerBottom}>
             <p>&copy; 2026 For You Support Coordination. All rights reserved.</p>
+            <a href="/admin" className={styles.adminLink}>Admin</a>
           </div>
         </div>
       </footer>

@@ -9,13 +9,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #fdf9f3;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s, background 0.3s;
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.97);
+  background: white;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -68,19 +68,24 @@
 }
 
 .navLinks a {
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
   transition: all 0.2s;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 
 .navLinks a:hover {
   color: #0d9488;
+}
+
+.navLinks a:first-child {
+  color: #0d9488;
+  font-weight: 600;
 }
 
 .mobileToggle {
@@ -166,31 +171,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(253, 249, 243, 0.92) 0%,
-    rgba(250, 246, 239, 0.85) 50%,
-    rgba(245, 239, 230, 0.75) 100%
-  );
+  background: rgba(253, 250, 245, 0.75);
 }
 
 .logoImage {
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .logoImageFull {
   object-fit: contain;
   height: auto;
   mix-blend-mode: multiply;
-  border-radius: 4px;
+  filter: contrast(1.05);
 }
 
 .logoImageFullDark {
   object-fit: contain;
   height: auto;
-  filter: brightness(1.15);
-  border-radius: 4px;
+  mix-blend-mode: multiply;
+  filter: contrast(1.1) brightness(1.05);
 }
 
 .heroContent {
@@ -198,82 +197,39 @@
   z-index: 1;
   text-align: center;
   padding: 120px 24px 80px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .heroLogoContainer {
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
-  background: rgba(253, 249, 243, 0.85);
-  padding: 16px 24px;
-  border-radius: 12px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-.heroBrandName {
-  font-family: var(--font-playfair), Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  color: #0c3b5e;
-  letter-spacing: 2px;
-  margin-bottom: 4px;
-}
-
-.heroBrandSub {
-  font-family: var(--font-inter), sans-serif;
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  font-weight: 600;
-  color: #0d9488;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.heroBrandSub::before,
-.heroBrandSub::after {
-  content: "";
-  width: 40px;
-  height: 1.5px;
-  background: #0d9488;
-  display: inline-block;
-}
-
-.heroTagline {
-  font-size: 1.1rem;
-  color: #6b7280;
-  max-width: 550px;
-  margin: 16px auto 32px;
-  line-height: 1.7;
 }
 
 .heroCta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #e8964b;
+  background: linear-gradient(135deg, #e8a348 0%, #d4943f 100%);
   color: white;
-  padding: 16px 40px;
-  border-radius: 12px;
-  font-size: 1.05rem;
-  font-weight: 700;
+  padding: 16px 48px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(232, 150, 75, 0.35);
+  box-shadow: 0 4px 20px rgba(232, 163, 72, 0.4);
   text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.5px;
 }
 
 .heroCta:hover {
-  background: #f0a85e;
+  background: linear-gradient(135deg, #f0ad4e 0%, #e8a348 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(232, 150, 75, 0.4);
+  box-shadow: 0 8px 30px rgba(232, 163, 72, 0.5);
 }
 
 /* ===== SECTION COMMON ===== */
@@ -476,14 +432,9 @@
 }
 
 .storiesLogoWrap {
-  width: 320px;
-  height: auto;
-  background: transparent;
-  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 /* ===== ABOUT ===== */
@@ -789,10 +740,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 8px 12px;
-  border-radius: 8px;
-  width: fit-content;
 }
 
 .footerLogoText {
@@ -898,11 +845,27 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .footerBottom p {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.adminLink {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.adminLink:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ===== RESPONSIVE ===== */
