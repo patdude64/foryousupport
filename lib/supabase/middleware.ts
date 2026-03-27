@@ -35,8 +35,8 @@ export async function updateSession(request: NextRequest) {
       },
     )
 
-    // Get user session
-    const { data } = await supabase.auth.getSession()
+    // Get user session - using type assertion for compatibility
+    const { data } = await (supabase.auth as { getSession: () => Promise<{ data: { session: { user: unknown } | null }; error: unknown }> }).getSession()
     const user = data?.session?.user
 
     // Protect /admin routes (except /admin/login and /admin/signup)
