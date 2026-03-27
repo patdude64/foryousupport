@@ -35,8 +35,9 @@ export async function updateSession(request: NextRequest) {
       },
     )
 
-    // Get user session - using type assertion for compatibility
-    const { data } = await (supabase.auth as { getSession: () => Promise<{ data: { session: { user: unknown } | null }; error: unknown }> }).getSession()
+    // Get user session - using any to bypass strict TS checking
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data } = await (supabase as any).auth.getSession()
     const user = data?.session?.user
 
     // Protect /admin routes (except /admin/login and /admin/signup)
