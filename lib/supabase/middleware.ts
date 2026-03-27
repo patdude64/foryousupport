@@ -13,6 +13,8 @@ export async function updateSession(request: NextRequest) {
     return supabaseResponse
   }
 
+  try {
+
   // With Fluid compute, don't put this client in a global environment
   // variable. Always create a new one on each request.
   const supabase = createServerClient(
@@ -73,4 +75,9 @@ export async function updateSession(request: NextRequest) {
   // of sync and terminate the user's session prematurely!
 
   return supabaseResponse
+  } catch (error) {
+    // If Supabase auth fails, still allow the request to proceed
+    console.error('[v0] Supabase middleware error:', error)
+    return NextResponse.next({ request })
+  }
 }
