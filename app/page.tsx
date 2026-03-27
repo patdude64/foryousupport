@@ -286,10 +286,13 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoContainer}>
-            <Logo size={100} />
+            <Logo size={110} />
           </div>
+          <p className={styles.heroTagline}>
+            Empowering NDIS participants to navigate their journey with confidence, compassion, and expert guidance.
+          </p>
           <a href="#contact" className={styles.heroCta}>
-            Get Started
+            Get Started Today
           </a>
         </div>
       </section>
@@ -499,7 +502,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>admin@foryou.au</p>
+                  <p>admin@foryousupport.au</p>
                 </div>
               </div>
 
@@ -705,7 +708,7 @@ export default function Home() {
                     strokeWidth="2"
                   />
                 </svg>
-                <span>admin@foryou.au</span>
+                <span>admin@foryousupport.au</span>
               </div>
               <div className={styles.footerContactItem}>
                 <svg viewBox="0 0 24 24">
