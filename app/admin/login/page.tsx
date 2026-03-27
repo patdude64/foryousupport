@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={styles.input}
-              placeholder="admin@foryou.au"
+              placeholder="admin@foryousupport.au"
               required
             />
           </div>

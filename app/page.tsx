@@ -502,7 +502,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>admin@foryou.au</p>
+                  <p>admin@foryousupport.au</p>
                 </div>
               </div>
 
@@ -708,7 +708,7 @@ export default function Home() {
                     strokeWidth="2"
                   />
                 </svg>
-                <span>admin@foryou.au</span>
+                <span>admin@foryousupport.au</span>
               </div>
               <div className={styles.footerContactItem}>
                 <svg viewBox="0 0 24 24">
