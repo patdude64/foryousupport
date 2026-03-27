@@ -3,19 +3,49 @@
 @tailwind utilities;
 
 :root {
+  /* Primary - Warm Teal */
+  --primary: #0d9488;
+  --primary-light: #14b8a6;
+  --primary-dark: #0f766e;
+  --primary-subtle: rgba(13, 148, 136, 0.08);
+  
+  /* Secondary - Deep Navy */
   --navy: #0c3b5e;
   --navy-dark: #082a44;
-  --teal: #0d9488;
-  --teal-light: #14b8a6;
-  --teal-dark: #0f766e;
-  --green: #22a67a;
-  --orange: #e8964b;
-  --orange-light: #f0a85e;
-  --gold: #e8a948;
-  --cream: #faf6ef;
-  --cream-light: #fdf9f3;
-  --text: #1f2937;
-  --text-light: #6b7280;
+  --navy-light: #1a5276;
+  
+  /* Accent - Warm Gold/Orange */
+  --accent: #e8a348;
+  --accent-light: #f5b961;
+  --accent-dark: #d4943f;
+  --accent-subtle: rgba(232, 163, 72, 0.12);
+  
+  /* Backgrounds - Warm Creams */
+  --bg-primary: #fefcf9;
+  --bg-secondary: #faf6ef;
+  --bg-tertiary: #f5efe6;
+  --bg-card: #ffffff;
+  
+  /* Text */
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --text-light: #a0aec0;
+  
+  /* Borders & Shadows */
+  --border-light: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-accent: 0 8px 30px rgba(232, 163, 72, 0.35);
+  --shadow-primary: 0 8px 30px rgba(13, 148, 136, 0.25);
+  
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
 }
 
 * {
@@ -29,15 +59,32 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--text);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
   line-height: 1.6;
-  background: #ffffff;
+  background: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-playfair), Georgia, serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
   line-height: 1.2;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
+::selection {
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
 }

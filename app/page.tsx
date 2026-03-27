@@ -286,10 +286,13 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroLogoContainer}>
-            <Logo size={100} />
+            <Logo size={110} />
           </div>
+          <p className={styles.heroTagline}>
+            Empowering NDIS participants to navigate their journey with confidence, compassion, and expert guidance.
+          </p>
           <a href="#contact" className={styles.heroCta}>
-            Get Started
+            Get Started Today
           </a>
         </div>
       </section>
